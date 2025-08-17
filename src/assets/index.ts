@@ -1,5 +1,6 @@
 import logo from "./logo.svg"
 import foodplate from "./foodplate.svg"
+import signupImage from "./signup.svg"
 
 
 const foodtext = {
@@ -12,5 +13,6 @@ const foodtext = {
 export {
     logo,
     foodplate,
-    foodtext
+    foodtext,
+    signupImage
 }
