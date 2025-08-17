@@ -1,12 +1,16 @@
 import Navbar from "./components/NavBar/Navbar"
-import Homepage from "./components/HomePage/Homepage"
+import Homepage from "./components/HomePage/Homepage";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <Homepage />
+      <div className="flex">
+        <SideBar />
+        <Homepage />
+      </div>
     </>
   )
 }
