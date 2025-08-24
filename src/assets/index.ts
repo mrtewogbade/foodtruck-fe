@@ -4,6 +4,7 @@ import pizza from "./pizza.png"
 import recOne from './Rectangle.svg'
 import recTwo from './Rectanglex.svg'
 import recThree from './Rectangley.svg'
+import signupImage from "./signup.svg"
 
 
 const foodtext = {
@@ -20,5 +21,6 @@ export {
     pizza,
     recOne,
     recTwo,
-    recThree
+    recThree,
+    signupImage
 }

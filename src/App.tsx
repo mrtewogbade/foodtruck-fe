@@ -1,18 +1,18 @@
-import Navbar from "./components/NavBar/Navbar"
-import Homepage from "./components/HomePage/Homepage";
-import SideBar from "./components/SideBar/SideBar";
+
+import Homepage from "./components/HomePage/Homepage"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SearchMenu from "./components/SeachMenu/SearchMenu";
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-      <div className="flex">
-        <SideBar />
-        <Homepage />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/search" element={<SearchMenu />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
+
 
 export default App

@@ -1,9 +1,11 @@
 import { foodplate, recOne,recTwo, recThree } from "../../assets";
+import Navbar from "../NavBar/Navbar";
 import SearchBar from "../SearchBar";
 
 const Homepage = () => {
   return (
     <div>
+      <Navbar />
       <div className="flex flex-row items-center justify-center h-screen bg-gray-100 p-4 gap-5">
       <div>
         <p>
