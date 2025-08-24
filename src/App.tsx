@@ -6,13 +6,16 @@ import Signup from './components/Signup/Signup';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      
     </BrowserRouter>
   );
-}
+}   
 
 export default App;
