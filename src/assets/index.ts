@@ -5,6 +5,15 @@ import recOne from './Rectangle.svg'
 import recTwo from './Rectanglex.svg'
 import recThree from './Rectangley.svg'
 import signupImage from "./signup.svg"
+import fries from "./fries.jpg";
+import grilled from "./grilled.jpg";
+import servedrice from "./servedrice.svg";
+import rice from "./rice.svg";
+import tray from "./tray.jpg"
+
+
+
+
 
 
 const foodtext = {
@@ -37,5 +46,10 @@ export {
     recTwo,
     recThree,
     signupImage,
-    searchTexts
+    searchTexts,
+    fries,
+    grilled,
+    servedrice,
+    rice,
+    tray
 }

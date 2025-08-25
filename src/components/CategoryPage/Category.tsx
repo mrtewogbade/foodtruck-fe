@@ -1,5 +1,7 @@
+import { fries, grilled, rice } from "../../assets";
 import SearchAndProfileBar from "../SearchAndProfileBar";
 import SideBar from "../SideBar/SideBar";
+
 
 export default function Category() {
   return (
@@ -13,12 +15,27 @@ export default function Category() {
           </div>
 
           <div>
-            <h1 className="text-2xl font-bold">Categories</h1>
-            <ul className="list-disc pl-5">
-              <li>Category 1</li>
-              <li>Category 2</li>
-              <li>Category 3</li>
-            </ul>
+            <div>
+              <h1>Category</h1>
+
+              {/** Food Items in the sub category **/}
+
+              <div>
+                <img src={fries} alt="Fries" />
+                <img src={grilled} alt="Grilled" />
+                <img src={rice} alt="Rice" />
+               
+
+              </div>
+
+              <div>
+
+
+
+              </div>
+
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
