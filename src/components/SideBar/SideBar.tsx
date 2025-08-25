@@ -4,7 +4,7 @@ import { logo } from "../../assets";
 function SideBar() {
   return (
     <div>
-      <nav className="flex flex-col items-start p-4 bg-white shadow-md h-full w-64">
+      <nav className="flex flex-col items-start p-4 bg-white shadow-md h-screen w-64">
         <div className="flex items-center gap-2 mb-6">
           <img src={logo} alt="Foodie" className="h-8" />
         </div>

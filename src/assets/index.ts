@@ -14,13 +14,28 @@ const foodtext = {
     truckFound: "Food truck found!",
 }
 
+const searchTexts = {
+    noResults: "No results found.",
+    searchPlaceholder: "Search for restaurants, dishes...",
+    truckFound: "Food truck found!",
+
+};
+
+const user = {
+    id: "1",
+    name: "John Doe",
+    email: "johndoe@example.com"
+}
+
 export {
     logo,
     foodplate,
     foodtext,
+    user,
     pizza,
     recOne,
     recTwo,
     recThree,
-    signupImage
+    signupImage,
+    searchTexts
 }
