@@ -1,4 +1,4 @@
-import pizzaImage from '../assets/pizza.png';
+import pizzaImage from '../assets/fries.jpg';
 import riceImage from '../assets/rice.jpg';
 import chickenImage from '../assets/chicken.jpg';
 import grilledMeatImage from '../assets/grilled-meat.jpg';

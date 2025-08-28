@@ -15,7 +15,7 @@ const SearchMenu = () => {
 
       {/* Jollof Rice Section */}
       <h2 className="text-2xl font-bold mb-4 mt-10">Jollof Rice</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="flex flex-row-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {JollofRiceSection()}
       </div>
     </div>
