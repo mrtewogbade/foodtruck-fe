@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SearchMenu from "./components/CategoryPage/Category";
 import Payment from "./components/Payment";
 import Category from "./components/CategoryPage/Category";
+import Signup from "./components/Signup/Signup";
+import Login from "./components/login/login";
 
 
 
@@ -15,9 +17,12 @@ function App() {
           
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/search" element={<SearchMenu />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/category" element={<Category />} />
+
 
         </Routes>
       
