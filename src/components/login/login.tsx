@@ -1,8 +1,7 @@
-// import React from 'react'
 import { signupImage } from "../../assets";
 import { logo } from "../../assets";
-import "./Signup.css";
-const Signup = () => {
+import "./login.css";
+const Login = () => {
   return (
     <>
       <div className="signupContent">
@@ -10,51 +9,20 @@ const Signup = () => {
           <img className="signup-image" src={signupImage} alt="Signup" />
         </div>
 
-          <form className="form-card">
+        <form className="form-card">
           <img className="logo" src={logo} alt="Logo" />
-          <h1 className="form-title">Create an Account</h1>
+          <h1 className="form-title">Welcome back to Food Truck</h1>
 
           <div className="form-group">
-            <label htmlFor="name">First Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Your first name"
+              placeholder="Your  Name"
               required
             />
           </div>
-
-
-          <div className="form-group">
-            <label htmlFor="name">Last Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Last name"
-              required
-            />
-          </div>
-
-
-
-
-          
-          <div className="form-group">
-            <label htmlFor="email">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Your phone number"
-              required
-            />
-          </div>
-
-
-
-
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -78,17 +46,6 @@ const Signup = () => {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="confirm-password">Confirm Password</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-              placeholder="Confirm your password"
-              required
-            />
-          </div>
-
           {/* <div className="form-group">
             <label htmlFor="message">Message</label>
             <textarea
@@ -100,12 +57,12 @@ const Signup = () => {
           </div> */}
 
           <button type="submit" className="submit-btn">
-            Signup
+            LOG IN
           </button>
         </form>
       </div>
     </>
-  ) ;
+  );
 };
 
-export default Signup;
+export default Login;
