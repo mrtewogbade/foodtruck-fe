@@ -1,5 +1,5 @@
 
-import SideBar from "../SideBar";
+import SideBar from "../SideBar/SideBar";
 import SearchBar  from "../SearchBar";
  import dishimg from '../../assets/Frame 38813902.svg'
  import frameimg from '../../assets/Frame 38813934 (1).svg'
