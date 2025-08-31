@@ -1,18 +1,13 @@
 import { foodplate } from "../../assets";
 import SearchBar from "../SearchBar";
-import { MapPin,  } from "lucide-react";
+import { MapPin, } from "lucide-react";
 import Navbar from "../NavBar/Navbar";
 const Homepage = () => {
   return (
     <div className="bg-gray-50 w-full ">
-      {/* ===== HEADER (logo left, small gaps between nav items) ===== */}
-      {/* <header className="border-b border-gray-100">
-        <div className="max-w-[1140px] mx-1  px-4 lg:px-6 flex items-center"></div>
-      </header> */}
 
       <Navbar />
 
-      {/* ===== HERO (left text, big gap to image, attached orange search) ===== */}
       <section className="max-w-[1140px] mx-auto px-30 lg:px-50 py-12 lg:py-20">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-30 lg:gap-35">
           {/* Left text */}
