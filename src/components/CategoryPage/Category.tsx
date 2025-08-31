@@ -2,7 +2,6 @@ import { fries, grilled, rice } from "../../assets";
 import SearchAndProfileBar from "../SearchAndProfileBar";
 import SideBar from "../SideBar/SideBar";
 
-
 export default function Category() {
   return (
     <div>
@@ -20,21 +19,17 @@ export default function Category() {
 
               {/** Food Items in the sub category **/}
 
-              <div>
-                <img src={fries} alt="Fries" />
-                <img src={grilled} alt="Grilled" />
-                <img src={rice} alt="Rice" />
-               
-
+              <div className="flex flex-wrap items-center  gap-4 p-4 ">
+                <img className="w-20 h-20" src={fries} alt="Fries" />
+                <img className="w-20 h-20" src={grilled} alt="Grilled" />
+                <img className="w-20 h-20" src={rice} alt="Rice" />
               </div>
 
               <div>
 
-
+                <h1>Sub Category</h1>
 
               </div>
-
-              <div></div>
             </div>
           </div>
         </div>
