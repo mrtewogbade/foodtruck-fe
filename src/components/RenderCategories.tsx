@@ -1,7 +1,7 @@
 import pizzaImage from '../assets/fries.jpg';
 import riceImage from '../assets/rice.jpg';
 import chickenImage from '../assets/chicken.jpg';
-import grilledMeatImage from '../assets/grilled-meat.jpg';
+import grilledMeatImage from '../assets/grilled.jpg';
 
 const renderCategories = () => {
   return (
