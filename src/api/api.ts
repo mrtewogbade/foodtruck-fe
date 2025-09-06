@@ -30,21 +30,31 @@ const handleResponse = async <T>(response: Response): Promise<T> => {
   } catch {
     throw new Error("Invalid server response");
   } 
-  
 };
+
 export const register = async (data: RegisterData): Promise<ApiResponse<{ message: string }>> => {
     const url = `${API_BASE_URL}/auth/register`;
      console.log("👉 Register URL (debug):", JSON.stringify(url));
   console.log("👉 Data (debug):", data);
 
+  // Transform the data to match backend expectations
+  const backendData = {
+    name: `${data.FirstName} ${data.LastName}`, // Combine first and last name
+    email: data.Email,
+    password: data.Password,
+    phone_number: data.PhoneNumber,
+    address: "", // You might want to add an address field to your form or set a default
+  };
+
+  console.log("👉 Backend Data (debug):", backendData);
+
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
+    body: JSON.stringify(backendData), // Send transformed data
   });
   return handleResponse<ApiResponse<{ message: string }>>(response);
 };
-
 
 export const login = async (data: LoginData): Promise<ApiResponse<{ token: string }>> => {
   const response = await fetch(`${API_BASE_URL}/auth/login`, {
