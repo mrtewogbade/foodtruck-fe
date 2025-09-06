@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SearchMenu from "./components/CategoryPage/Category";
 import Payment from "./components/Payment";
 import Category from "./components/CategoryPage/Category";
-import Signup from "./components/Signup/Signup";
+import Signup  from "./components/Signup/Signup";
 import Login from "./components/login/login";
 
 
@@ -18,7 +18,6 @@ function App() {
         <Route path="/" element={<Homepage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/description" element={<Description />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/search" element={<SearchMenu />} />
