@@ -2,7 +2,49 @@
 import { signupImage } from "../../assets";
 import { logo } from "../../assets";
 import "./Signup.css";
-const Signup = () => {
+import { register }  from "../../api/api"
+import { useState } from "react";
+
+
+  const Signup = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      // alert("Passwords do not match!");
+      return;
+    }
+    try {
+      await register({
+        FirstName: formData.firstName,
+        LastName: formData.lastName,
+        PhoneNumber: formData.phone,
+        Email: formData.email,
+        Password: formData.password,
+        ConfirmPassword: formData.confirmPassword, 
+      });
+      alert("Signup successful! Please log in.");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        alert(error.message);
+      } else {
+        alert("An unknown error occurred.");
+      }
+    }
+  };
+
   return (
     <>
       <div className="signupContent">
@@ -10,29 +52,33 @@ const Signup = () => {
           <img className="signup-image" src={signupImage} alt="Signup" />
         </div>
 
-          <form className="form-card">
+          <form className="form-card" onSubmit={handleSubmit}>
           <img className="logo" src={logo} alt="Logo" />
           <h1 className="form-title">Create an Account</h1>
 
           <div className="form-group">
-            <label htmlFor="name">First Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="firstName"
+              name="firstName"
               placeholder="Your first name"
+               value={formData.firstName}
+            onChange={handleChange}
               required
             />
           </div>
 
 
           <div className="form-group">
-            <label htmlFor="name">Last Name</label>
+            <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="lastName"
+              name="lastName"
               placeholder="Your Last name"
+                value={formData.lastName}
+                onChange={handleChange}
               required
             />
           </div>
@@ -48,6 +94,8 @@ const Signup = () => {
               id="phone"
               name="phone"
               placeholder="Your phone number"
+               value={formData.phone}
+            onChange={handleChange}
               required
             />
           </div>
@@ -63,6 +111,8 @@ const Signup = () => {
               id="email"
               name="email"
               placeholder="you@example.com"
+               value={formData.email}
+            onChange={handleChange}
               required
             />
           </div>
@@ -74,6 +124,8 @@ const Signup = () => {
               id="password"
               name="password"
               placeholder="Your password"
+               value={formData.password}
+            onChange={handleChange}
               required
             />
           </div>
@@ -83,8 +135,9 @@ const Signup = () => {
             <input
               type="password"
               id="confirm-password"
-              name="confirm-password"
-              placeholder="Confirm your password"
+              name="confirmPassword" placeholder="Confirm your password"
+                value={formData.confirmPassword}
+            onChange={handleChange}
               required
             />
           </div>
@@ -109,3 +162,6 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
