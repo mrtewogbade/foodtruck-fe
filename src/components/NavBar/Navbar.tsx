@@ -19,10 +19,10 @@ const Navbar = () => {
       </div>
 
       <div className="flex flex-row gap-4">
-        <button onClick={() => navigate("/login")} className="bg-gray-50 text-[#F2994A] border border-[#F2994A] rounded-md px-4 py-2">
+        <button onClick={() => navigate("/login")} className="bg-gray-50 text-[#F2994A] border border-[#F2994A] rounded-md px-4 py-2 cursor-pointer">
           Log in
         </button>{" "}
-        <button onClick={() => navigate("/signup")} className="bg-[#F2994A] text-white rounded-md px-4 py-2">
+        <button onClick={() => navigate("/signup")} className="bg-[#F2994A] text-white rounded-md px-4 py-2 cursor-pointer">
           Sign up
         </button>
       </div>
