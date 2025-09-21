@@ -2,11 +2,10 @@
 import { signupImage } from "../../assets";
 import { logo } from "../../assets";
 import "./Signup.css";
-import { register }  from "../../api/api"
+import { register } from "../../api/api"
 import { useState } from "react";
 
-
-  const Signup = () => {
+const Signup = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,7 +32,7 @@ import { useState } from "react";
         PhoneNumber: formData.phone,
         Email: formData.email,
         Password: formData.password,
-        ConfirmPassword: formData.confirmPassword, 
+        ConfirmPassword: formData.confirmPassword,
       });
       alert("Signup successful! Please log in.");
     } catch (error: unknown) {
@@ -46,122 +45,107 @@ import { useState } from "react";
   };
 
   return (
-    <>
-      <div className="signupContent">
-        <div>
-          <img className="signup-image" src={signupImage} alt="Signup" />
-        </div>
+    <div className="signup-container">
+      <div className="signup-image-container">
+        <img className="signup-image" src={signupImage} alt="Signup" />
+      </div>
 
-          <form className="form-card" onSubmit={handleSubmit}>
-          <img className="logo" src={logo} alt="Logo" />
-          <h1 className="form-title">Create an Account</h1>
-
-          <div className="form-group">
-            <label htmlFor="firstName">First Name</label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="Your first name"
-               value={formData.firstName}
-            onChange={handleChange}
-              required
-            />
+      <div className="form-container">
+        <form className="form-card" onSubmit={handleSubmit}>
+          <div className="form-header">
+            <img className="logo" src={logo} alt="Logo" />
+            <h1 className="form-title">Create an Account</h1>
           </div>
 
+          <div className="form-fields">
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Your first name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-          <div className="form-group">
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Your Last name"
-                value={formData.lastName}
+              <div className="form-group">
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Your last name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number"
+                value={formData.phone}
                 onChange={handleChange}
-              required
-            />
-          </div>
+                required
+              />
+            </div>
 
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Your password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-
-          
-          <div className="form-group">
-            <label htmlFor="email">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Your phone number"
-               value={formData.phone}
-            onChange={handleChange}
-              required
-            />
-          </div>
-
-
-
-
-
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-               value={formData.email}
-            onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Your password"
-               value={formData.password}
-            onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="confirm-password">Confirm Password</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirmPassword" placeholder="Confirm your password"
+            <div className="form-group">
+              <label htmlFor="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
                 value={formData.confirmPassword}
-            onChange={handleChange}
-              required
-            />
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
-
-          {/* <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div> */}
 
           <button type="submit" className="submit-btn">
-            Signup
+            Create Account
           </button>
         </form>
       </div>
-    </>
-  ) ;
+    </div>
+  );
 };
 
 export default Signup;
-
-
-

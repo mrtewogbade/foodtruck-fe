@@ -23,7 +23,7 @@ const Login = () => {
       });
 
       alert(result.message || "Login successful!");
-      window.location.href = "/"; // redirect to homepage or dashboard
+      window.location.href = "/";
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
@@ -43,18 +43,6 @@ const Login = () => {
         <form className="form-card" onSubmit={handleSubmit}>
           <img className="logo" src={logo} alt="Logo" />
           <h1 className="form-title">Welcome back to Food Truck</h1>
-
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your  Name"
-    
-              required
-            />
-          </div>
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -81,16 +69,6 @@ const Login = () => {
               required
             />
           </div>
-
-          {/* <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div> */}
 
           <button type="submit" className="submit-btn">
             LOG IN
