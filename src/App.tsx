@@ -19,6 +19,8 @@ export default function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/category" element={<Category />} />
 
+
+
         </Routes>
       
     </BrowserRouter>
