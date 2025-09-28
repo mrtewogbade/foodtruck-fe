@@ -92,7 +92,7 @@ const createFood: React.FC<FoodFormProps> = ({ food, onSubmit, onCancel }) => {
   return (
     
     <div className="food-form-overlay">
-       <div className="sb"><SideBar /></div>
+       <SideBar />
       <form className="food-form" onSubmit={handleSubmit}>
         <h2>{food ? "Edit Food Item" : "Add New Food Item"}</h2>
 
