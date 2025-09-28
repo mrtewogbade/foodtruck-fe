@@ -9,8 +9,8 @@ export interface RegisterData {
 }
 
 export interface LoginData {
-    PhoneOrEmail: string;
-  Password: string;
+  phone_or_email: string;
+  password: string;
 }
 
 interface ApiResponse<T> {
@@ -43,7 +43,7 @@ export const register = async (data: RegisterData): Promise<ApiResponse<{ messag
     email: data.Email,
     password: data.Password,
     phone_number: data.PhoneNumber,
-    address: "", // You might want to add an address field to your form or set a default
+    address: "", 
   };
 
   console.log("👉 Backend Data (debug):", backendData);

@@ -1,85 +1,235 @@
-.signup-image {
-  height: 100vh;
-  width: 60vw;
-}
-
-.signupContent {
+/* Main container */
+.signup-container {
   display: flex;
-  flex-direction: row;
+  min-height: 100vh;
+  background: #f8f9fa;
 }
 
-/* Form box */
+/* Image section */
+.signup-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* Form section */
+.form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-width: 400px;
+}
+
 .form-card {
   background: #fff;
-  padding: 2rem;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
+  border: 1px solid #e9ecef;
+}
+
+/* Header section */
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .logo {
-  height: 4rem;
-  margin-left: 5rem;
+  height: 3rem;
+  width: auto;
+  margin-bottom: 1rem;
 }
 
 .form-title {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 1.7rem;
-  margin-left: -2.2rem;
-}
-
-/* Heading */
-.form-card h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
 }
 
-/* Inputs and labels */
+/* Form fields container */
+.form-fields {
+  margin-bottom: 2rem;
+}
+
+/* Form row for side-by-side inputs */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Form groups */
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: black;
-  margin-left: -5rem;
-  margin-bottom: -1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.9rem;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 31rem;
-  padding: 10px 12px;
-  border: 1px solid rgb(22, 22, 22);
-  border-radius: 5px;
-  font-size: 14px;
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s ease;
-  margin-left: -5rem;
-  margin-bottom: -1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #007bff;
+.form-group input:focus {
+  border-color: #F2994A;
+  box-shadow: 0 0 0 3px rgba(242, 153, 74, 0.1);
 }
 
-/* Button */
+.form-group input::placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+/* Submit button */
 .submit-btn {
-  width: 12rem;
-  padding: 12px;
+  width: 100%;
+  padding: 0.875rem 1rem;
   background: #F2994A;
   border: none;
   border-radius: 8px;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(242, 153, 74, 0.2);
 }
 
 .submit-btn:hover {
-  background: #F2994A;
+  background: #e8864a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(242, 153, 74, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+  
+  .signup-image-container {
+    flex: none;
+    height: 30vh;
+    min-height: 200px;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    min-width: unset;
+  }
+  
+  .form-card {
+    padding: 2rem 1.5rem;
+    max-width: none;
+    margin: 0 auto;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-row .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .signup-container {
+    min-height: 100vh;
+  }
+  
+  .signup-image-container {
+    height: 25vh;
+    min-height: 150px;
+  }
+  
+  .form-container {
+    padding: 1rem 0.75rem;
+  }
+  
+  .form-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .logo {
+    height: 2.5rem;
+  }
+  
+  .form-title {
+    font-size: 1.4rem;
+  }
+  
+  .form-group input {
+    padding: 0.7rem 0.875rem;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .form-container {
+    padding: 0.5rem;
+  }
+  
+  .form-card {
+    padding: 1rem 0.75rem;
+  }
+  
+  .form-title {
+    font-size: 1.3rem;
+  }
 }
