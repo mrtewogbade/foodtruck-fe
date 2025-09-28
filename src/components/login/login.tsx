@@ -18,8 +18,8 @@ const Login = () => {
     e.preventDefault();
     try {
       const result = await login({
-        phone_or_email: formData.email,
-        password: formData.password,
+        PhoneOrEmail: formData.email,
+        Password: formData.password,
       });
 
       alert(result.message || "Login successful!");
